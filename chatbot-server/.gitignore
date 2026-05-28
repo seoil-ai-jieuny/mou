@@ -1,0 +1,26 @@
+# 환경변수 (절대 커밋 금지 — OPENAI_API_KEY 포함)
+.env
+.env.local
+.env.*.local
+
+# Chroma DB (재생성 가능)
+# Chroma DB
+# ※ 방식 B(미리 만든 DB를 GitHub에 포함해 무료로 안정 운영)를 쓰려면
+#   아래 줄을 주석 처리(앞에 #)해서 chroma_db/ 가 커밋되게 하세요.
+#   방식 A(서버에서 매번 인덱싱)면 아래 줄을 그대로 두세요.
+# chroma_db/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

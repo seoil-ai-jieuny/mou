@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jieun127@seoil.ac.kr</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/chatbot.css" />
+</head>
+<body>
+
+<!-- ── 상단 바 ── -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <span class="status-dot"></span>HYUN, JI-EUN Prof. // INDUSTRY_LINK_PORTAL [ONLINE]
+    </div>
+    <div class="top-bar-right">
+      <a href="https://www.seoil.ac.kr" target="_blank" rel="noopener">SEOIL ↗</a>
+      <a href="https://www.seoil.ac.kr/sites/aigame/index.do" target="_blank" rel="noopener">AI · GAME ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── 헤더 ── -->
+<header class="site-header">
+  <div class="site-header-inner">
+    <div class="logo-area">
+      <a href="https://www.seoil.ac.kr" target="_blank" rel="noopener noreferrer"><img src="./image/logo.png" alt="서일대학교 로고"></a>
+      <div class="logo-divider"></div>
+      <a href="https://www.seoil.ac.kr/sites/aigame/index.do" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;"><div class="site-title">
+        서일대학교 AI게임융합학과
+        <small>DEPARTMENT OF AI AND GAME CONVERGENCE</small>
+      </div></a>
+    </div>
+    <div>
+      <span class="header-badge">INDUSTRY LINK PORTAL</span>
+    </div>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-tag">SEOIL · AI &amp; GAME CONVERGENCE</div>
+      
+      <h1 class="hero-title">
+        <span class="line">AI &amp; GAME,</span>
+        <span class="line accent-1">미래의 새로움을</span>
+        <span class="line accent-2">설계하다</span>
+      </h1>
+      
+      <div class="hero-subtitle">// SHAPE THE FUTURE WITH AI &amp; GAME CONVERGENCE</div>
+      
+      <p class="hero-desc">
+        서일대학교 AI게임융합학과는 <strong>인공지능소프트웨어전공</strong>과
+        <strong>게임개발전공</strong>을 융합 운영하여, 데이터를 다루는 AI 전문가와
+        인공지능을 이해하는 게임 전문가를 양성합니다.
+      </p>
+      
+      <div class="hero-cta">
+        <a href="#department" class="btn-cyber primary">EXPLORE DEPT</a>
+        <a href="#partners" class="btn-cyber secondary">VIEW MOU</a>
+      </div>
+    </div>
+    
+    <!-- HUD 디스플레이 -->
+    <div class="hero-visual">
+      <div class="hud-display">
+        <div class="hud-corners"></div>
+        
+        <div class="hud-top">
+          <span class="id-tag">[ DEPT_INFO_v2.0 ]</span>
+          <span>SYS.STAT: ACTIVE</span>
+        </div>
+        
+        <div class="hud-stats">
+          <div class="hud-stat accent">
+            <div class="label">// MAJOR 01</div>
+            <div class="value">AI<span class="unit">.SW</span></div>
+          </div>
+          <div class="hud-stat accent-2">
+            <div class="label">// MAJOR 02</div>
+            <div class="value">GAME<span class="unit">.DEV</span></div>
+          </div>
+          <div class="hud-stat">
+            <div class="label">// CYCLE</div>
+            <div class="value">3<span class="unit">YR</span></div>
+          </div>
+          <div class="hud-stat">
+            <div class="label">// MOU</div>
+            <div class="value">7<span class="unit">+</span></div>
+          </div>
+        </div>
+        
+        <div class="hud-bottom">
+          <span><span class="signal">●</span> SIGNAL OK</span>
+          <span>            
+            <p id="today"></p>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  const today = new Date();
+
+  const formatted =
+    today.getFullYear() + "-" +
+    String(today.getMonth() + 1).padStart(2, "0") + "-" +
+    String(today.getDate()).padStart(2, "0");
+
+  document.getElementById("today").innerText = formatted;
+</script>
+
+<!-- ── 네비게이션 ── -->
+<nav class="cyber-nav" id="top-nav">
+  <div class="cyber-nav-inner">
+    <a href="#university" class="active">SEOIL</a>
+    <a href="#department">AI_GAME</a>
+    <a href="#partners">MOU</a>
+    <a href="#contact">CONTACT</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ─────────────────────────────────────────
+       01. 서일대학교
+       ───────────────────────────────────────── -->
+  <section id="university" class="section-block">
+    <div class="section-head">
+      <div>
+        <div class="section-num-wrap">
+          <div class="section-line"></div>
+          <span class="section-num">SECTION_01</span>
+        </div>
+        <h2>SEOIL UNIVERSITY</h2>
+        <div class="desc">/ 반세기 전통의 서울 중랑 소재 사립 전문대학</div>
+      </div>
+      <div class="side">// ABOUT</div>
+    </div>
+
+    <!-- 메인 비주얼 -->
+    <div class="univ-showcase">
+      <div class="univ-showcase-inner">
+        <div class="showcase-tag">SINCE 1975 · 50 YEARS</div>
+        <h3>지식과 덕망을 바탕으로<br><span class="accent">창조적 서일 인재</span>를 양성합니다</h3>
+        <div class="showcase-en">// 1975 — 2025 · Seoil University · Half a century of vocational education excellence</div>
+      </div>
+    </div>
+
+    <!-- 본문 -->
+    <div class="univ-intro">
+      <div class="univ-intro-text">
+        <h3><span class="highlight">서일에서 내일로</span>, 50년의 전통</h3>
+        <p>
+          서일대학교는 1974년 학교법인 세방학원 설립을 시작으로, 1975년 배성실업학교로 개교하여
+          서울실업전문학교(1977) · 서일공업전문대학(1979) · 서일전문대학(1983) · 서일대학(1998)을 거쳐
+          2013년 현재의 서일대학교로 교명을 변경한 반세기 전통의 사립 전문대학입니다.
+        </p>
+        <p>
+          서울 중랑구 면목동 캠퍼스를 중심으로 IT융합학부, 스마트공학부, 휴먼케어학부, 글로벌외국어학부, 경영사회학부,
+          디자인학부, 미디어예술학부 등 <strong>7개 학부 29개 학과</strong>를 운영하며,
+          현장 실무 중심 교육과 풍부한 산학협력 네트워크로 산업사회를 이끌 전문인재를 양성하고 있습니다.
+        </p>
+
+        <!-- 교훈 -->
+        <div class="motto-box">
+          <div class="motto-han">知德培養 · 初志一貫</div>
+
+        </div>
+
+        <!-- 비전 카드 -->
+        <div class="univ-highlights">
+          <div class="highlight-card">
+            <div class="label">// EDU</div>
+            <div class="value">실무·현장 중심 교육</div>
+          </div>
+          <div class="highlight-card">
+            <div class="label">// IND</div>
+            <div class="value">산학협력 네트워크</div>
+          </div>
+          <div class="highlight-card">
+            <div class="label">// GLB</div>
+            <div class="value">해외 11개 대학 교류</div>
+          </div>
+          <div class="highlight-card">
+            <div class="label">// FTR</div>
+            <div class="value">디지털 신산업 인재 양성</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 우측 정보 패널 -->
+      <aside class="info-panel">
+        <h4>UNIV.INFO</h4>
+        <ul class="info-list">
+          <li><span class="key">NAME</span><span class="val">서일대학교</span></li>
+          <li><span class="key">EN_NAME</span><span class="val">Seoil Univ.</span></li>
+          <li><span class="key">ESTAB</span><span class="val">1974 / 1975</span></li>
+          <li><span class="key">LOCATION</span><span class="val">서울 중랑구</span></li>
+          <li><span class="key">TYPE</span><span class="val">사립 전문대학</span></li>
+          <li><span class="key">MOTTO</span><span class="val">지덕배양·초지일관</span></li>
+          <li><span class="key">FACULTY</span><span class="val">7부 29과</span></li>
+          <li><span class="key">LINK</span><span class="val"><a href="https://www.seoil.ac.kr" target="_blank" rel="noopener">seoil.ac.kr ↗</a></span></li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- 연혁 -->
+    <div class="history-section">
+      <h4>HISTORY.LOG</h4>
+      <div class="history-grid">
+        <div class="history-item">
+          <div class="year">1974</div>
+          <div class="event">학교법인 세방학원 설립</div>
+        </div>
+        <div class="history-item">
+          <div class="year">1975</div>
+          <div class="event">배성실업학교 개교</div>
+        </div>
+        <div class="history-item">
+          <div class="year">1979</div>
+          <div class="event">서일공업전문대학 승격</div>
+        </div>
+        <div class="history-item">
+          <div class="year">1998</div>
+          <div class="event">서일대학 교명 변경</div>
+        </div>
+        <div class="history-item">
+          <div class="year">2013</div>
+          <div class="event">서일대학교 교명 변경</div>
+        </div>
+        <div class="history-item">
+          <div class="year">2022</div>
+          <div class="event">AI게임융합학과 신설</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       02. AI게임융합학과
+       ───────────────────────────────────────── -->
+  <section id="department" class="section-block">
+    <div class="section-head">
+      <div>
+        <div class="section-num-wrap">
+          <div class="section-line"></div>
+          <span class="section-num">SECTION_02</span>
+        </div>
+        <h2>DEPT · AI &amp; GAME CONVERGENCE</h2>
+        <div class="desc">/ AI와 게임, 융합콘텐츠로 미래의 새로움을 설계하는 학과</div>
+      </div>
+      <div class="side">// DEPARTMENT</div>
+    </div>
+
+    <!-- 메인 디스플레이 -->
+    <div class="dept-showcase">
+      <div class="dept-showcase-inner">
+        <div class="dept-tag">★ 4TH INDUSTRIAL REVOLUTION · FUTURE-READY</div>
+        <h3>"인공지능", "데이터사이언스"<br>그리고 <span class="em">"게임"</span>의 만남</h3>
+        <p class="dept-slogan">
+          미래 IT 산업을 이끌어갈 <strong>창의적 개발자 양성의 요람</strong>.<br>
+          AI 알고리즘, 게임 엔진, 실시간 그래픽스, 데이터 분석을 통합한 교육과정으로
+          AI 기반 게임 개발자, 콘텐츠 기획자, AI 응용 전문가를 양성합니다.
+        </p>
+        
+        <div class="dept-keywords">
+          <div class="dept-keyword">AI Engineering</div>
+          <div class="dept-keyword">Data Science & Engineering</div>
+          <div class="dept-keyword">Game Content Development</div>
+          <div class="dept-keyword">Software Engineering</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 학과 본문 -->
+    <div class="dept-intro-box">
+      <h3>인공지능과 게임의 융합, <span class="em">현재를 위한 혁신 산업</span></h3>
+      <p>
+        인공지능과 게임은 미래사회를 위한 기술이 아닌 현재를 위한 혁신적인 산업으로 자리 잡고 있습니다.
+        본 학과는 <strong>인공지능소프트웨어전공</strong>과 <strong>게임개발전공</strong>을 융합하여 운영하는 학과로,
+        AI와 게임을 활용한 융합콘텐츠를 개발하는 역량과 비전을 키울 수 있는 학과입니다.
+      </p>
+      <p>
+        2024년 교육부 <strong>"신산업분야 특화 선도 전문대학 지원사업 2.0"</strong> 1유형 AI분야에 선정되어
+        미래 핵심 인재 양성에 박차를 가하고 있으며, 포트폴리오 위주의 교육과정을 통해
+        산업현장에서 경쟁력 있는 개발 및 기획 능력을 갖출 수 있도록 합니다.
+      </p>
+
+      <!-- 3대 인재상 -->
+      <div class="dept-goals">
+        <div class="dept-goal">
+          <span class="goal-num">// GOAL_01</span>
+          <div class="goal-title">비즈니스 마인드를 갖춘<br>빅데이터 전문가</div>
+        </div>
+        <div class="dept-goal">
+          <span class="goal-num">// GOAL_02</span>
+          <div class="goal-title">데이터를 다루는<br>인공지능 전문가</div>
+        </div>
+        <div class="dept-goal">
+          <span class="goal-num">// GOAL_03</span>
+          <div class="goal-title">인공지능을 이해하는<br>게임 전문가</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 학과 특성 -->
+    <div class="curriculum-h">CORE FEATURES</div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <span class="card-num">FT_01</span>
+        <h4>AI 핵심기술 교육</h4>
+        <p>머신러닝·딥러닝·데이터 마이닝·생성형 AI 등 최신 AI 핵심 알고리즘을 실습 중심으로 학습합니다.</p>
+      </div>
+      <div class="feature-card">
+        <span class="card-num">FT_02</span>
+        <h4>게임 엔진·콘텐츠 제작</h4>
+        <p>2D/3D 게임 프로그래밍, Unity·게임엔진 활용, AR/VR 등 게임 콘텐츠 제작 전 과정을 다룹니다.</p>
+      </div>
+      <div class="feature-card">
+        <span class="card-num">FT_03</span>
+        <h4>포트폴리오 중심 교육</h4>
+        <p>산업현장에서 경쟁력 있는 개발 및 기획 능력을 갖출 수 있도록 포트폴리오 위주의 교육과정을 운영합니다.</p>
+      </div>
+      <div class="feature-card">
+        <span class="card-num">FT_04</span>
+        <h4>융합콘텐츠 인재 양성</h4>
+        <p>AI와 게임을 활용한 융합콘텐츠 개발 역량과 비전을 키울 수 있는 학과입니다.</p>
+      </div>
+    </div>
+
+    <!-- 자격증·진로 -->
+    <div class="curriculum-h">CERT &amp; CAREER</div>
+    <div class="dual-info">
+      <div class="dual-info-card">
+        <h5>// CERTIFICATIONS</h5>
+        <div class="tag-cloud">
+          <span class="info-pill cert">인공지능 전문가(AIEC)</span>
+          <span class="info-pill cert">빅데이터 전문가(ADsP)</span>
+          <span class="info-pill cert">빅데이터 전문가(ADP)</span>
+          <span class="info-pill cert">정보처리 산업기사</span>
+          <span class="info-pill cert">UNITY Associate</span>
+        </div>
+      </div>
+      <div class="dual-info-card career">
+        <h5>// CAREER PATH</h5>
+        <div class="tag-cloud">
+          <span class="info-pill career">인공지능 전문가</span>
+          <span class="info-pill career">게임 개발자</span>
+          <span class="info-pill career">네트워크 프로그래머</span>
+          <span class="info-pill career">빅데이터 분석가</span>
+          <span class="info-pill career">응용SW 엔지니어</span>
+          <span class="info-pill career">VR 개발자</span>
+        </div>
+      </div>
+    </div>
+    <!-- 교육과정 -->
+    <div class="curriculum-h">CURRICULUM.MAP</div>
+    <div class="curriculum-table">
+      <div class="curriculum-row">
+        <div class="year">1학년<span class="year-en">// FOUNDATION</span></div>
+        <div class="subjects">
+          <span class="subject-tag">인공지능의 이해</span>
+          <span class="subject-tag">AI시대의 자기표현</span>
+          <span class="subject-tag">게임의 이해</span>
+          <span class="subject-tag">게임기획의 이해</span>
+          <span class="subject-tag">객체지향게임프로그래밍</span>
+          <span class="subject-tag">컴퓨터사이언스 입문</span>
+          <span class="subject-tag">프로그래밍 기초</span>
+        </div>
+      </div>
+      <div class="curriculum-row">
+        <div class="year">2학년<span class="year-en">// CORE</span></div>
+        <div class="subjects">
+          <span class="subject-tag ai">머신러닝</span>
+          <span class="subject-tag ai">딥러닝 실습</span>
+          <span class="subject-tag ai">인공지능 응용 프로그래밍</span>
+          <span class="subject-tag ai">데이터 분석 기획</span>
+          <span class="subject-tag ai">빅데이터 분석실습</span>
+          <span class="subject-tag game">게임엔진 활용</span>
+          <span class="subject-tag game">2D 게임 프로그래밍</span>
+          <span class="subject-tag game">3D 게임 프로그래밍</span>
+          <span class="subject-tag game">게임 스토리보드</span>
+          <span class="subject-tag">웹콘텐츠 프로그래밍</span>
+        </div>
+      </div>
+      <div class="curriculum-row">
+        <div class="year">3학년<span class="year-en">// ADVANCED</span></div>
+        <div class="subjects">
+          <span class="subject-tag ai">AI 클라우드 활용</span>
+          <span class="subject-tag ai">AI 플랫폼 활용</span>
+          <span class="subject-tag ai">데이터 마이닝</span>
+          <span class="subject-tag ai">생성형 인공지능</span>
+          <span class="subject-tag ai">AI 서비스 개발</span>
+          <span class="subject-tag ai">AI 산업 세미나</span>
+          <span class="subject-tag game">AR/VR 게임 프로그래밍</span>
+          <span class="subject-tag game">게임 서버 프로그래밍</span>
+          <span class="subject-tag game">게임 레벨 디자인</span>
+          <span class="subject-tag game">게임 출시와 마케팅</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       03. 협력기관
+       ───────────────────────────────────────── -->
+  <section id="partners" class="section-block">
+    <div class="section-head">
+      <div>
+        <div class="section-num-wrap">
+          <div class="section-line"></div>
+          <span class="section-num">SECTION_03</span>
+        </div>
+        <h2>MOU</h2>
+        <div class="desc">/ AI게임융합학과와 함께하는 산학연</div>
+      </div>
+      <div class="side">// MOU [10]</div>
+    </div>
+
+    <div class="partners-intro">
+      <p>
+        AI게임융합학과는 <strong>공공기관 · 전문가 단체 · 산업체</strong>와 폭넓은 협력 네트워크를 구축하고 있습니다.<br>
+        특히 산업체와의 협력을 통해 AI · 게임 등 IT 분야의 실무형 인재 양성을 추진합니다.
+      </p>
+      <div class="partners-count">
+        <div class="stat">
+          <div class="num">10</div>
+          <div class="label">TOTAL</div>
+        </div>
+        <div class="stat">
+          <div class="num">7</div>
+          <div class="label">협약체</div>
+        </div>
+        <div class="stat">
+          <div class="num">3</div>
+          <div class="label">협약검토</div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 카테고리 2: 산업체 -->
+    <div class="partner-cat-head corp">
+      <div class="partner-cat-icon"><center>협약<br>체결</center></div>
+      <h3>산업체</h3>
+      <span class="cat-count">// 7 NODES</span>
+    </div>
+
+    <div class="partner-grid">
+      
+      <article class="partner-card logo-only">
+        <div class="partner-logo-area dark">
+          <span class="logo-badge corp">산업체</span>
+          <img src="./image/partners/4rizon.png" alt="4rizon">
+        </div>
+      </article>
+
+      <article class="partner-card logo-only">
+        <div class="partner-logo-area">
+          <span class="logo-badge corp">산업체</span>
+          <img src="./image/partners/jibongine.png" alt="지봉이네I">
+        </div>
+      </article>
+
+      <article class="partner-card logo-only">
+        <div class="partner-logo-area dark">
+          <span class="logo-badge corp">산업체</span>
+          <img src="./image/partners/flitesquare.png" alt="flitesquare" style="filter: invert(1) brightness(2);">
+        </div>
+      </article>
+
+
+      <article class="partner-card logo-only">
+        <div class="partner-logo-area dark">
+          <span class="logo-badge corp">산업체</span>
+          <img src="./image/partners/cnh.png" alt="CnH">
+        </div>
+      </article>
+
+      <article class="partner-card logo-only">
+        <div class="partner-logo-area">
+          <span class="logo-badge corp">산업체</span>
+          <img src="./image/partners/impressionmedia.png" alt="Impression media">
+        </div>
+      </article>
+
+      <article class="partner-card logo-only">
+        <div class="partner-logo-area">
+          <span class="logo-badge corp">산업체</span>
+          <img src="./image/partners/introfilm.png" alt="introfilm">
+        </div>
+      </article>
+
+      <article class="partner-card logo-only">
+        <div class="partner-logo-area">
+          <span class="logo-badge corp">산업체</span>
+          <img src="./image/partners/skycam.jpg" alt="skycam">
+        </div>
+      </article>
+
+      <article class="partner-card add-new">
+        <div class="add-new-icon">+</div>
+        <h4>NEW PARTNER SLOT</h4>
+        <p>
+          신규 협력기관이 합류하면<br>
+          이 영역에 로고와 함께 추가됩니다.
+        </p>
+      </article>
+
+    </div>
+
+
+    <!-- 카테고리 1: 공공·단체 -->
+    <div class="partner-cat-head">
+      <div class="partner-cat-icon"><center>협약<br>검토</center></div>
+      <h3>준비중</h3>
+      <span class="cat-count">// 3 NODES</span>
+    </div>
+
+    <div class="partner-grid">
+      <article class="partner-card">
+        <div class="partner-logo-area">
+          <span class="logo-badge gov">공공기관</span>
+          <img src="./image/partners/saeil.png" alt="동대문새일센터">
+        </div>
+        <div class="partner-body">
+          <span class="partner-category gov">공공기관</span>
+          <h4>동대문새일센터</h4>
+          <div class="partner-sub">// Dongdaemun Saeil Center · 여성가족부</div>
+          <p class="partner-desc">
+            경력단절 여성의 IT 직무 역량 강화와 취업 지원을 위한 협력.
+            AI · 게임 분야 직업교육훈련 공동 운영 및 산학연계 프로그램 개발.
+          </p>
+          <div class="partner-tags">
+            <span class="partner-tag">#경력단절여성</span>
+            <span class="partner-tag">#직업교육</span>
+            <span class="partner-tag">#취업연계</span>
+          </div>
+          <a href="dongdaemoonSaeil.html" class="partner-link">VIEW DETAIL</a>
+        </div>
+      </article>
+
+      <article class="partner-card">
+        <div class="partner-logo-area">
+          <span class="logo-badge assoc">사단법인</span>
+          <img src="./image/partners/ictpe.jpg" alt="한국정보통신기술사회">
+        </div>
+        <div class="partner-body">
+          <span class="partner-category assoc">사단법인</span>
+          <h4>한국정보통신기술사회</h4>
+          <div class="partner-sub">// ICTPE · ICT Professional Engineers</div>
+          <p class="partner-desc">
+            정보관리 · 컴퓨터시스템응용 · 정보통신 분야 기술사와 연계한
+            현장 전문가 특강 및 실무 중심 교육과정 자문 협력.
+          </p>
+          <div class="partner-tags">
+            <span class="partner-tag">#기술사연계</span>
+            <span class="partner-tag">#전문가특강</span>
+            <span class="partner-tag">#커리큘럼자문</span>
+          </div>
+          <a href="under_preparation.html" class="partner-link">VIEW DETAIL</a>
+        </div>
+      </article>
+
+      <article class="partner-card">
+        <div class="partner-logo-area">
+          <span class="logo-badge corp">산업체</span>
+          <img src="./image/partners/ktmos.png" alt="KT MOS">
+        </div>
+        <div class="partner-body">
+          <span class="partner-category corp">산업체</span>
+          <h4>KT MOS</h4>
+          <div class="partner-sub">// 케이티엠오에스 · 무선네트워크 운용 전문</div>
+          <p class="partner-desc">
+            5G · LTE · 재난안전통신망 등 무선 액세스네트워크 운용 전문 KT 계열사.
+            네트워크 인프라 · 통신망 운용 분야 현장실습 및 산학협력 추진.
+          </p>
+          <div class="partner-tags">
+            <span class="partner-tag">#5G네트워크</span>
+            <span class="partner-tag">#무선통신</span>
+            <span class="partner-tag">#네트워크운용</span>
+          </div>
+          <a href="under_preparation.html" class="partner-link">VIEW DETAIL</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       04. 문의·연락처
+       ───────────────────────────────────────── -->
+  <section id="contact" class="section-block">
+    <div class="section-head">
+      <div>
+        <div class="section-num-wrap">
+          <div class="section-line"></div>
+          <span class="section-num">SECTION_04</span>
+        </div>
+        <h2>CONTACT</h2>
+        <div class="desc">/ 산학협력 관련 문의</div>
+      </div>
+      <div class="side">// REACH OUT</div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card univ-tone">
+        <h4>// 서일대학교 AI게임융합학과 현지은 교수</h4>
+        <ul class="info-list">
+          <li><span class="key"><align="left>Email.</span><span class="val"><a href="mailto:jieun127@seoil.ac.kr">jieun127@seoil.ac.kr</a></align></span></li>
+          <li><span class="key"><align="left>Tel.</span><span class="val">02-490-7420</align></span></li>
+          <li><span class="key"><align="left>Mobile</span><span class="val">010-8934-9335</align></span></li>
+          <li><span class="key"><align="left>Addr.</span><span class="val">서울특별시 중랑구 용마산로90길 28 (면목동) 누리관 207호 | 지하철 7호선 면목역 2번 출구<a href="https://www.seoil.ac.kr/seoil/520/subview.do" target="_blank">(지도 열기)</align></a></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ── 푸터 ── -->
+<footer>
+  <div class="footer-bottom">
+    © 2026 Jieun Hyun | AI and Game Convergence · SEOIL University
+  </div>
+</footer>
+
+<script>
+  const navLinks = document.querySelectorAll("#top-nav a");
+  const nav = document.querySelector("#top-nav");
+
+  function activateMenu() {
+    let current = "";
+    const scrollPos = window.scrollY + nav.offsetHeight + 50;
+    
+    document.querySelectorAll("section[id]").forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        current = section.getAttribute("id");
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (!href.startsWith("#")) return;
+      
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        const navHeight = nav.offsetHeight;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+      navLinks.forEach(l => l.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+
+  window.addEventListener("scroll", activateMenu);
+  activateMenu();
+</script>
+
+<!-- ── MOU RAG Chatbot ── -->
+<script>
+  // 백엔드 주소.
+  window.CHATBOT_API_URL = "https://mou-vxmm.onrender.com/api/chat";
+</script>
+<script src="./js/chatbot.js" defer></script>
+</body>
+</html>

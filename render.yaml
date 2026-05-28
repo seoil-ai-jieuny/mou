@@ -1,0 +1,28 @@
+# Render Blueprint — 산학협력·MOU 규정 챗봇 백엔드
+#
+# 기본값 = 방식 B (미리 만든 chroma_db를 GitHub에 포함, 무료로 안정 운영).
+#   → startCommand에 ingest 없음. 서버는 DB를 읽기만 함.
+#
+# 방식 A (Render가 매번 인덱싱)로 하려면 startCommand를 아래로 교체:
+#   python ingest.py && uvicorn server:app --host 0.0.0.0 --port $PORT
+services:
+  - type: web
+    name: seoil-mou-chatbot
+    runtime: python
+    rootDir: chatbot-server
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
+    plan: free
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false          # 대시보드에서 직접 입력 (비밀값)
+      - key: EMBED_BATCH_SIZE
+        value: "3"
+      - key: SLEEP_BETWEEN_BATCHES
+        value: "12"
+      - key: CHAT_MODEL
+        value: gemini-2.5-flash
+      - key: EMBED_MODEL
+        value: gemini-embedding-001
+      - key: CORS_ORIGINS
+        value: "*"

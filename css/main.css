@@ -1,0 +1,1402 @@
+/* ============================================
+   서일대학교 AI게임융합학과 산학협력 포털 - 공통 스타일
+   참고: 서일대학교 / AI게임융합학과 공식 홈페이지
+   ============================================ */
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gov-blue:     #003675;
+  --gov-blue-2:   #1B4A8C;
+  --gov-blue-3:   #E8EFF7;
+  --gov-red:      #C73E1D;
+  --gov-navy:     #002855;
+  --gov-gray-1:   #F5F6F8;
+  --gov-gray-2:   #E5E7EB;
+  --gov-gray-3:   #9CA3AF;
+  --gov-gray-4:   #6B7280;
+  --gov-text:     #1F2937;
+  --gov-accent:   #00529C;
+  --gov-yellow:   #FBC02D;
+  --bg:           #FFFFFF;
+  --bg-soft:      #FAFBFC;
+
+  /* 섹션 컬러 - dongdaeSaeil.html과 동일 톤 */
+  --saeil:        #003675;
+  --univ:         #8C1D40;
+  --joint:        #2D5A3D;
+  
+  --radius:       4px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  background: var(--bg-soft);
+  color: var(--gov-text);
+  line-height: 1.7;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   상단 정부 띠 (Top Bar)
+   ============================================ */
+.gov-top-bar {
+  background: #F5F6F8;
+  border-bottom: 1px solid var(--gov-gray-2);
+  font-size: 12px;
+  color: var(--gov-gray-4);
+}
+.gov-top-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gov-top-left::before {
+  content: '🎓';
+  margin-right: 6px;
+  filter: grayscale(0.5);
+}
+.gov-top-right a {
+  color: var(--gov-gray-4);
+  text-decoration: none;
+  margin-left: 16px;
+}
+.gov-top-right a:hover { color: var(--gov-blue); }
+
+/* ============================================
+   헤더 (Header)
+   ============================================ */
+.gov-header {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--gov-gray-2);
+}
+.gov-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.gov-logo-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.gov-logo-area img {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+.gov-logo-divider {
+  width: 1px;
+  height: 30px;
+  background: var(--gov-gray-2);
+}
+.gov-site-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--gov-navy);
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+.gov-site-title small {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--gov-gray-4);
+  margin-top: 2px;
+  letter-spacing: 0;
+}
+.gov-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--gov-blue-3);
+  color: var(--gov-blue);
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================
+   페이지 타이틀 영역
+   ============================================ */
+.page-title-section {
+  background: linear-gradient(180deg, #002855 0%, #003675 100%);
+  color: #FFFFFF;
+  padding: 64px 24px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.page-title-section::before {
+  content: '';
+  position: absolute;
+  top: 0; right: -100px;
+  width: 500px; height: 100%;
+  background: radial-gradient(circle, rgba(251,192,45,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.page-title-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.breadcrumb {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+.breadcrumb span {
+  margin: 0 8px;
+  opacity: 0.5;
+}
+.page-eyebrow {
+  display: inline-block;
+  padding: 5px 14px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 2px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 18px;
+  color: rgba(255,255,255,0.9);
+}
+.page-title-section h1 {
+  font-size: clamp(1.7rem, 3.8vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.page-title-section .lead {
+  font-size: 15px;
+  color: rgba(255,255,255,0.85);
+  max-width: 760px;
+  line-height: 1.85;
+  font-weight: 400;
+}
+.page-meta {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  gap: 32px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
+  flex-wrap: wrap;
+}
+.page-meta div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.page-meta dt {
+  color: rgba(255,255,255,0.55);
+}
+.page-meta dd {
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* ============================================
+   네비게이션 (Nav)
+   ============================================ */
+nav.gov-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: #FFFFFF;
+  border-bottom: 2px solid var(--gov-blue);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.gov-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+nav.gov-nav a {
+  text-decoration: none;
+  color: var(--gov-text);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 16px 22px;
+  transition: all 0.15s;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  letter-spacing: -0.01em;
+}
+nav.gov-nav a:hover {
+  color: var(--gov-blue);
+  background: var(--gov-gray-1);
+}
+nav.gov-nav a.active {
+  color: var(--gov-blue);
+  font-weight: 700;
+  border-bottom-color: var(--gov-blue);
+}
+
+/* ============================================
+   Main & Section
+   ============================================ */
+main { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 48px 24px 80px;
+}
+
+.section-block {
+  margin-bottom: 56px;
+}
+
+.section-title-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--gov-navy);
+  flex-wrap: wrap;
+}
+.section-title-row .title-left h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gov-navy);
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; height: 32px;
+  background: var(--gov-blue);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 2px;
+}
+.section-title-row .title-left .desc {
+  font-size: 13px;
+  color: var(--gov-gray-4);
+  margin-top: 6px;
+  padding-left: 44px;
+}
+.section-title-row .title-right {
+  font-size: 12px;
+  color: var(--gov-gray-3);
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+/* ============================================
+   서일대 소개 영역 (공식 홈페이지 스타일)
+   ============================================ */
+
+/* 비주얼 헤더 - 서일대 메인 비주얼 분위기 */
+.univ-visual {
+  background: 
+    linear-gradient(135deg, rgba(0,40,85,0.92) 0%, rgba(0,54,117,0.88) 100%),
+    radial-gradient(circle at 80% 30%, rgba(251,192,45,0.18) 0%, transparent 50%);
+  color: #FFFFFF;
+  padding: 56px 44px 48px;
+  border-radius: 4px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.univ-visual::before {
+  content: '';
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 280px; height: 280px;
+  background: 
+    radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.univ-visual::after {
+  content: 'SEOIL';
+  position: absolute;
+  right: 32px; bottom: 24px;
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: rgba(255,255,255,0.05);
+  line-height: 1;
+  pointer-events: none;
+  font-family: 'Pretendard Variable', sans-serif;
+}
+.univ-visual .univ-eyebrow {
+  display: inline-block;
+  padding: 5px 12px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-bottom: 18px;
+  color: rgba(255,255,255,0.9);
+}
+.univ-visual h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+.univ-visual h3 .accent {
+  color: #FFD89B;
+}
+.univ-visual .slogan-en {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.04em;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  position: relative;
+  z-index: 2;
+}
+
+/* 대학 본문 영역 */
+.univ-intro {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+.univ-intro-text h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--gov-navy);
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--gov-blue);
+  display: inline-block;
+}
+.univ-intro-text h3 .highlight { color: var(--gov-blue); }
+.univ-intro-text p {
+  font-size: 14.5px;
+  line-height: 1.9;
+  color: var(--gov-text);
+  margin-bottom: 14px;
+}
+.univ-intro-text p strong { color: var(--gov-navy); font-weight: 700; }
+
+/* 교훈 박스 */
+.motto-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, var(--gov-blue-3) 0%, #DFE8F5 100%);
+  border-left: 4px solid var(--gov-blue);
+  margin: 22px 0;
+  border-radius: 0 4px 4px 0;
+  position: relative;
+}
+.motto-box::before {
+  content: '校 訓';
+  position: absolute;
+  top: 8px; right: 14px;
+  font-size: 10px;
+  color: var(--gov-blue);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-family: 'Nanum Myeongjo', 'Batang', serif;
+  opacity: 0.6;
+}
+.motto-box .motto-han {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gov-navy);
+  letter-spacing: 0.1em;
+  font-family: 'Nanum Myeongjo', 'Batang', serif;
+}
+.motto-box .motto-ko {
+  font-size: 12.5px;
+  color: var(--gov-blue);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* 비전·특성 카드 */
+.univ-intro-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 22px;
+}
+.univ-highlight-item {
+  background: #FFFFFF;
+  border: 1px solid var(--gov-gray-2);
+  border-left: 3px solid var(--gov-blue);
+  padding: 14px 16px;
+  border-radius: 0 4px 4px 0;
+  transition: all 0.15s;
+}
+.univ-highlight-item:hover {
+  border-color: var(--gov-blue);
+  border-left-width: 5px;
+  box-shadow: 0 2px 6px rgba(0,54,117,0.06);
+}
+.univ-highlight-item .label {
+  font-size: 11px;
+  color: var(--gov-blue);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+.univ-highlight-item .value {
+  font-size: 14px;
+  color: var(--gov-navy);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* 우측 정보 카드 */
+.univ-intro-card {
+  background: #FFFFFF;
+  border: 1px solid var(--gov-gray-2);
+  border-top: 3px solid var(--gov-blue);
+  border-radius: 4px;
+  padding: 24px 24px;
+}
+.univ-intro-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gov-navy);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gov-gray-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.univ-intro-card h4::after {
+  content: 'AT A GLANCE';
+  font-size: 10px;
+  color: var(--gov-gray-3);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+.univ-info-list { list-style: none; }
+.univ-info-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--gov-gray-2);
+  font-size: 13px;
+  gap: 12px;
+}
+.univ-info-list li:last-child { border-bottom: none; }
+.univ-info-list .key { color: var(--gov-gray-4); font-weight: 500; flex-shrink: 0; }
+.univ-info-list .val { color: var(--gov-text); font-weight: 600; text-align: right; }
+
+/* 연혁 타임라인 */
+.univ-history {
+  background: #FFFFFF;
+  border: 1px solid var(--gov-gray-2);
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin-top: 28px;
+}
+.univ-history h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gov-navy);
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gov-gray-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.univ-history h4::after {
+  content: 'HISTORY · 50 YEARS';
+  font-size: 10px;
+  color: var(--gov-gray-3);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+.history-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  position: relative;
+}
+.history-item {
+  background: var(--gov-gray-1);
+  border-radius: 4px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--gov-blue);
+  position: relative;
+}
+.history-item .year {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--gov-blue);
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+.history-item .event {
+  font-size: 12.5px;
+  color: var(--gov-text);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ============================================
+   AI게임융합학과 영역 (학과 홈페이지 스타일)
+   ============================================ */
+
+/* 학과 메인 비주얼 - 학과 공식 사이트의 비주얼 분위기 */
+.dept-visual {
+  background: 
+    linear-gradient(135deg, rgba(0,40,85,0.94) 0%, rgba(0,54,117,0.88) 50%, rgba(91,42,134,0.55) 100%),
+    radial-gradient(circle at 15% 70%, rgba(0,191,166,0.18) 0%, transparent 50%);
+  color: #FFFFFF;
+  padding: 60px 44px 56px;
+  border-radius: 4px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.dept-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.025) 49%, rgba(255,255,255,0.025) 51%, transparent 52%);
+  background-size: 30px 30px;
+  pointer-events: none;
+}
+.dept-visual::after {
+  content: 'AI · GAME';
+  position: absolute;
+  right: 24px; bottom: 12px;
+  font-size: 6.5rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: rgba(255,255,255,0.05);
+  line-height: 1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.dept-visual .visual-inner {
+  position: relative;
+  z-index: 2;
+}
+.dept-visual .dept-eyebrow {
+  display: inline-block;
+  padding: 5px 12px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-bottom: 18px;
+  color: rgba(255,255,255,0.95);
+}
+.dept-visual h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+.dept-visual h3 .em {
+  color: #FFD89B;
+}
+.dept-visual .dept-sub-slogan {
+  font-size: 15px;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.7;
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+.dept-visual .dept-keywords {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+.dept-keyword {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 2px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+.dept-keyword::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: #FFD89B;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255,216,155,0.6);
+}
+
+/* 학과 본문 안내 박스 */
+.dept-intro-box {
+  background: #FFFFFF;
+  border: 1px solid var(--gov-gray-2);
+  border-top: 3px solid var(--gov-blue);
+  border-radius: 4px;
+  padding: 28px 32px;
+  margin-bottom: 28px;
+}
+.dept-intro-box h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gov-navy);
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed var(--gov-gray-2);
+}
+.dept-intro-box h3 .em {
+  color: var(--gov-blue);
+}
+.dept-intro-box p {
+  font-size: 14.5px;
+  color: var(--gov-text);
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+.dept-intro-box p strong {
+  color: var(--gov-navy);
+  font-weight: 700;
+}
+
+/* 학과 교육목표 박스 */
+.dept-goals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px dashed var(--gov-gray-2);
+}
+.dept-goal-item {
+  background: var(--gov-gray-1);
+  border-radius: 4px;
+  padding: 18px 18px;
+  border-top: 3px solid var(--gov-blue);
+  text-align: center;
+}
+.dept-goal-item:nth-child(2) { border-top-color: var(--univ); }
+.dept-goal-item:nth-child(3) { border-top-color: var(--joint); }
+.dept-goal-item .goal-num {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gov-gray-4);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.dept-goal-item .goal-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gov-navy);
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
+/* 학과 핵심특성 카드 */
+.dept-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.dept-feature-card {
+  background: #FFFFFF;
+  border: 1px solid var(--gov-gray-2);
+  border-radius: 4px;
+  padding: 22px 22px 20px;
+  transition: all 0.2s;
+  position: relative;
+}
+.dept-feature-card:hover {
+  border-color: var(--gov-blue);
+  box-shadow: 0 2px 8px rgba(0,54,117,0.08);
+}
+.dept-feature-card .card-num-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: var(--gov-blue);
+  padding: 3px 10px;
+  border-radius: 2px;
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+}
+.dept-feature-card h4 {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--gov-navy);
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--gov-gray-2);
+}
+.dept-feature-card p {
+  font-size: 13px;
+  color: var(--gov-text);
+  line-height: 1.75;
+}
+
+/* 진로·자격증 */
+.dept-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.dept-info-card {
+  background: #FFFFFF;
+  border: 1px solid var(--gov-gray-2);
+  border-left: 3px solid var(--gov-blue);
+  border-radius: 4px;
+  padding: 20px 22px;
+}
+.dept-info-card.cert { border-left-color: var(--univ); }
+.dept-info-card.career { border-left-color: var(--joint); }
+.dept-info-card h5 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--gov-navy);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--gov-gray-2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dept-info-card h5 .ic { font-size: 15px; }
+.dept-info-card .tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.info-tag {
+  display: inline-block;
+  padding: 5px 11px;
+  background: var(--gov-gray-1);
+  border: 1px solid var(--gov-gray-2);
+  border-radius: 2px;
+  font-size: 12.5px;
+  color: var(--gov-text);
+  font-weight: 500;
+}
+.info-tag.cert-tag { 
+  background: #F8E8ED;
+  color: var(--univ); 
+  border-color: rgba(140,29,64,0.15);
+}
+.info-tag.career-tag { 
+  background: #E5F0E8;
+  color: var(--joint); 
+  border-color: rgba(45,90,61,0.15);
+}
+
+/* 학과 활동/소식 */
+.dept-news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.dept-news-item {
+  background: #FFFFFF;
+  border: 1px solid var(--gov-gray-2);
+  border-radius: 4px;
+  padding: 18px 20px;
+  transition: all 0.15s;
+}
+.dept-news-item:hover {
+  border-color: var(--gov-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,54,117,0.06);
+}
+.dept-news-item .news-date {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--gov-blue);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  padding: 2px 8px;
+  background: var(--gov-blue-3);
+  border-radius: 2px;
+}
+.dept-news-item h5 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--gov-navy);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+/* 교육과정 */
+.curriculum-h {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gov-navy);
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 12px;
+  border-left: 4px solid var(--gov-blue);
+}
+.curriculum-table {
+  background: #FFFFFF;
+  border: 1px solid var(--gov-gray-2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.curriculum-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  border-bottom: 1px solid var(--gov-gray-2);
+}
+.curriculum-row:last-child { border-bottom: none; }
+.curriculum-row .year {
+  background: var(--gov-blue-3);
+  color: var(--gov-navy);
+  padding: 18px 22px;
+  font-weight: 700;
+  font-size: 13.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  border-right: 1px solid var(--gov-gray-2);
+}
+.curriculum-row .year .year-en {
+  font-size: 10.5px;
+  color: var(--gov-blue);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.curriculum-row .subjects {
+  padding: 18px 22px;
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.subject-tag {
+  display: inline-block;
+  padding: 5px 11px;
+  background: var(--gov-gray-1);
+  color: var(--gov-text);
+  border: 1px solid var(--gov-gray-2);
+  border-radius: 2px;
+  font-size: 12.5px;
+  font-weight: 500;
+}
+.subject-tag.ai {
+  background: var(--gov-blue);
+  color: #FFFFFF;
+  border-color: var(--gov-blue);
+  font-weight: 600;
+}
+.subject-tag.game {
+  background: var(--univ);
+  color: #FFFFFF;
+  border-color: var(--univ);
+  font-weight: 600;
+}
+
+/* ============================================
+   협력기관
+   ============================================ */
+.partners-intro {
+  background: #FFFFFF;
+  border: 1px solid var(--gov-gray-2);
+  border-left: 4px solid var(--gov-blue);
+  padding: 20px 24px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.partners-intro p {
+  flex: 1;
+  min-width: 280px;
+  font-size: 14px;
+  color: var(--gov-text);
+  line-height: 1.75;
+}
+.partners-intro p strong {
+  color: var(--gov-blue);
+  font-weight: 700;
+}
+.partners-count {
+  display: flex;
+  gap: 24px;
+}
+.partners-count .stat { text-align: center; }
+.partners-count .stat .num {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--gov-blue);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.partners-count .stat .label {
+  font-size: 11px;
+  color: var(--gov-gray-4);
+  font-weight: 500;
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+}
+
+/* 카테고리 헤더 */
+.partner-category-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 28px 0 16px;
+  padding: 14px 20px;
+  background: #FFFFFF;
+  border: 1px solid var(--gov-gray-2);
+  border-left: 4px solid var(--gov-blue);
+  border-radius: 4px;
+}
+.partner-category-header:first-of-type { margin-top: 0; }
+.partner-category-header.corp { border-left-color: var(--joint); }
+.partner-category-icon {
+  width: 38px; height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: var(--gov-blue);
+  color: #FFFFFF;
+}
+.partner-category-header.corp .partner-category-icon {
+  background: var(--joint);
+}
+.partner-category-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gov-navy);
+  letter-spacing: -0.01em;
+  flex: 1;
+}
+.partner-category-header .cat-count {
+  font-size: 12px;
+  color: var(--gov-blue);
+  background: var(--gov-blue-3);
+  padding: 4px 12px;
+  border-radius: 2px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.partner-category-header.corp .cat-count {
+  color: var(--joint);
+  background: #E5F0E8;
+}
+
+/* 협력기관 카드 */
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.partner-card {
+  background: #FFFFFF;
+  border: 1px solid var(--gov-gray-2);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.partner-card:hover {
+  border-color: var(--gov-blue);
+  box-shadow: 0 4px 16px rgba(0,54,117,0.08);
+}
+
+.partner-logo-area {
+  height: 130px;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--gov-gray-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.partner-logo-area.dark { background: #1A1A1A; }
+.partner-logo-area::before {
+  content: 'BI';
+  position: absolute;
+  top: 8px; left: 10px;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--gov-gray-3);
+  letter-spacing: 0.08em;
+  background: rgba(255,255,255,0.95);
+  padding: 2px 7px;
+  border-radius: 2px;
+  border: 1px solid var(--gov-gray-2);
+  z-index: 2;
+}
+.partner-logo-area.dark::before {
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.7);
+  border-color: rgba(255,255,255,0.2);
+}
+.partner-logo-area img {
+  max-height: 100%;
+  max-width: 85%;
+  object-fit: contain;
+}
+.partner-logo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--gov-gray-3);
+  gap: 8px;
+}
+.partner-logo-placeholder .placeholder-icon {
+  font-size: 32px;
+  opacity: 0.4;
+}
+.partner-logo-placeholder .placeholder-text {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.partner-body {
+  padding: 20px 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.partner-category {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--gov-blue);
+  background: var(--gov-blue-3);
+  padding: 3px 9px;
+  border-radius: 2px;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+.partner-category.gov { background: #E8EFF7; color: var(--gov-blue); }
+.partner-category.assoc { background: #FDE8ED; color: var(--univ); }
+.partner-category.corp { background: #E5F0E8; color: var(--joint); }
+.partner-category.media { background: #FFF1E0; color: #B5560E; }
+
+.partner-card h4 {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--gov-navy);
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+.partner-card .partner-sub {
+  font-size: 11.5px;
+  color: var(--gov-gray-4);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.partner-card .partner-ceo {
+  font-size: 12px;
+  color: var(--gov-text);
+  margin-bottom: 12px;
+  padding: 5px 10px;
+  background: var(--gov-gray-1);
+  border-radius: 2px;
+  display: inline-block;
+  font-weight: 600;
+}
+.partner-card .partner-ceo .ceo-label {
+  color: var(--gov-gray-4);
+  font-weight: 500;
+  margin-right: 6px;
+  font-size: 11px;
+}
+.partner-card .partner-desc {
+  font-size: 13px;
+  color: var(--gov-text);
+  line-height: 1.75;
+  margin-bottom: 14px;
+  flex: 1;
+}
+.partner-meta {
+  list-style: none;
+  margin-bottom: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--gov-gray-2);
+}
+.partner-meta li {
+  font-size: 11.5px;
+  color: var(--gov-gray-4);
+  padding: 3px 0;
+  display: flex;
+  gap: 8px;
+}
+.partner-meta li::before {
+  content: '·';
+  color: var(--gov-blue);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.partner-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+.partner-tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 9px;
+  background: var(--gov-gray-1);
+  color: var(--gov-gray-4);
+  border-radius: 2px;
+  font-weight: 500;
+  border: 1px solid var(--gov-gray-2);
+}
+.partner-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 14px;
+  background: var(--gov-blue);
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 2px;
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: all 0.15s;
+  letter-spacing: -0.01em;
+}
+.partner-link:hover { background: var(--gov-navy); }
+.partner-link::after {
+  content: '→';
+  font-size: 15px;
+  transition: transform 0.15s;
+}
+.partner-link:hover::after { transform: translateX(3px); }
+.partner-link.info {
+  background: transparent;
+  color: var(--gov-blue);
+  border: 1px solid var(--gov-blue);
+}
+.partner-link.info:hover {
+  background: var(--gov-blue);
+  color: #FFFFFF;
+}
+
+.partner-card.add-new {
+  border: 2px dashed var(--gov-gray-2);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  padding: 40px 20px;
+  text-align: center;
+}
+.partner-card.add-new:hover {
+  border-color: var(--gov-blue);
+  background: rgba(0,54,117,0.02);
+  box-shadow: none;
+}
+.add-new-icon {
+  width: 56px; height: 56px;
+  border: 2px solid var(--gov-gray-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: var(--gov-gray-3);
+  margin-bottom: 16px;
+  transition: all 0.2s;
+  border-radius: 2px;
+}
+.partner-card.add-new:hover .add-new-icon {
+  border-color: var(--gov-blue);
+  color: var(--gov-blue);
+}
+.partner-card.add-new h4 {
+  color: var(--gov-gray-4);
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+.partner-card.add-new p {
+  font-size: 12px;
+  color: var(--gov-gray-3);
+  line-height: 1.7;
+}
+
+/* ============================================
+   문의 카드
+   ============================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.contact-card {
+  background: #FFFFFF;
+  border: 1px solid var(--gov-gray-2);
+  border-top: 3px solid var(--gov-blue);
+  border-radius: 4px;
+  padding: 24px 26px;
+}
+.contact-card.univ-tone { border-top-color: var(--univ); }
+.contact-card.joint-tone { border-top-color: var(--joint); }
+.contact-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gov-navy);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gov-gray-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-card h4::after {
+  content: 'CONTACT';
+  font-size: 10px;
+  color: var(--gov-gray-3);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+/* ============================================
+   푸터
+   ============================================ */
+footer {
+  background: var(--gov-navy);
+  color: rgba(255,255,255,0.75);
+  padding: 0;
+  border-top: 4px solid var(--gov-blue);
+}
+.footer-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+.footer-col h6 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  letter-spacing: -0.01em;
+}
+.footer-col p, .footer-col li {
+  font-size: 13px;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.7);
+}
+.footer-col p strong { color: #FFFFFF; font-weight: 600; }
+.footer-col ul { list-style: none; }
+.footer-col a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+}
+.footer-col a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.footer-bottom {
+  background: #001a3d;
+  padding: 14px 24px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ============================================
+   반응형
+   ============================================ */
+@media (max-width: 900px) {
+  .univ-intro { grid-template-columns: 1fr; }
+  .dept-info-grid { grid-template-columns: 1fr; }
+  .dept-goals { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .gov-top-inner { flex-direction: column; gap: 4px; align-items: flex-start; }
+  .gov-header-inner { padding: 16px; }
+  .gov-logo-area { gap: 12px; }
+  .gov-logo-area img { height: 36px; }
+  .gov-site-title { font-size: 15px; }
+  .page-title-section { padding: 48px 16px 40px; }
+  main { padding: 32px 16px 60px; }
+  nav.gov-nav a { padding: 14px 14px; font-size: 13px; }
+  .section-title-row .title-left .desc { padding-left: 0; }
+  .univ-visual, .dept-visual { padding: 40px 24px 36px; }
+  .univ-visual::after, .dept-visual::after { font-size: 4rem; }
+  .univ-intro-highlights { grid-template-columns: 1fr; }
+  .curriculum-row { grid-template-columns: 100px 1fr; }
+  .curriculum-row .year { padding: 14px 12px; font-size: 12.5px; }
+  .curriculum-row .subjects { padding: 14px; }
+  .partners-intro { flex-direction: column; align-items: flex-start; }
+  .partners-count { width: 100%; justify-content: space-around; }
+  .section-num { width: 28px; height: 28px; font-size: 12px; }
+}

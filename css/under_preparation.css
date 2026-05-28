@@ -1,0 +1,371 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #f5f3ee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #1a1a1a;
+}
+
+.top-bar {
+  background: #003764;
+  color: white;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  padding: 6px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar a { color: #a8c8e8; text-decoration: none; margin-left: 16px; font-size: 10px; }
+
+.header {
+  background: white;
+  border-bottom: 3px solid #003764;
+  padding: 0 40px;
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+}
+
+.emblem {
+  width: 56px;
+  height: 56px;
+}
+
+.site-title {
+  flex: 1;
+}
+
+.site-title .ministry {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #003764;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.site-title .subtitle {
+  font-size: 11px;
+  color: #666;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+
+.header-tools {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.header-tools button {
+  font-size: 11px;
+  color: #555;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.nav {
+  background: #003764;
+  padding: 0 40px;
+}
+
+.nav-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+}
+
+.nav a {
+  color: #b8d0e8;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 11px 20px;
+  display: block;
+  letter-spacing: 0.03em;
+  border-right: 1px solid #1a4f7e;
+  transition: background 0.15s;
+}
+
+.nav a:first-child { border-left: 1px solid #1a4f7e; }
+.nav a:hover { background: #1a4f7e; color: white; }
+.nav a.active { background: #c8332d; color: white; }
+
+.breadcrumb {
+  background: #eae8e2;
+  border-bottom: 1px solid #d0cec8;
+  padding: 8px 40px;
+  font-size: 11px;
+  color: #888;
+  letter-spacing: 0.03em;
+}
+
+.breadcrumb span { color: #003764; }
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+.notice-box {
+  background: white;
+  border: 1px solid #c8c4bc;
+  border-top: 4px solid #003764;
+  max-width: 680px;
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+
+.notice-header {
+  background: #f0ede6;
+  border-bottom: 1px solid #d4d0c8;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notice-header .doc-num {
+  font-size: 11px;
+  color: #888;
+  letter-spacing: 0.06em;
+  margin-left: auto;
+}
+
+.notice-icon-wrap {
+  width: 36px;
+  height: 36px;
+  background: #003764;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notice-body {
+  padding: 40px 48px;
+}
+
+.classification {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: #c8332d;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border: 1px solid #c8332d;
+  display: inline-block;
+  padding: 2px 8px;
+}
+
+.main-heading {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.main-heading em {
+  color: #003764;
+  font-style: normal;
+}
+
+.sub-heading {
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 0.06em;
+  text-transform: ;
+  margin-bottom: 28px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #d4d0c8;
+  margin: 28px 0;
+}
+
+.desc {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+.desc strong {
+  color: #003764;
+  font-weight: 700;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 28px;
+  font-size: 13px;
+}
+
+.info-table tr {
+  border-bottom: 1px solid #e8e4dc;
+}
+
+.info-table tr:first-child {
+  border-top: 1px solid #c8c4bc;
+}
+
+.info-table td {
+  padding: 10px 14px;
+  vertical-align: top;
+}
+
+.info-table td:first-child {
+  background: #f0ede6;
+  font-weight: 500;
+  color: #444;
+  width: 130px;
+  border-right: 1px solid #d4d0c8;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.info-table td:last-child {
+  color: #222;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff7e0;
+  border: 1px solid #e6c642;
+  color: #7a5f00;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  letter-spacing: 0.06em;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background: #e6a800;
+  border-radius: 50%;
+  animation: blink 1.4s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.progress-section {
+  margin-top: 28px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #888;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+
+.progress-track {
+  background: #e8e4dc;
+  height: 8px;
+  border-radius: 0;
+  overflow: hidden;
+  border: 1px solid #d4d0c8;
+}
+
+.progress-fill {
+  background: #003764;
+  height: 100%;
+  width: 0;
+  animation: progressAnim 2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes progressAnim {
+  from { width: 0; }
+  to { width: 68%; }
+}
+
+.seal-area {
+  border-top: 1px solid #d4d0c8;
+  margin-top: 32px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.seal-text {
+  text-align: right;
+  font-size: 11px;
+  color: #888;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+}
+
+.seal {
+  width: 56px;
+  height: 56px;
+  border: 2px solid #8b0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8b0000;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-align: center;
+  line-height: 1.3;
+  transform: rotate(-8deg);
+  opacity: 0.75;
+}
+
+.footer {
+  background: #1a1a1a;
+  color: #888;
+  padding: 20px 40px;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  line-height: 1.7;
+  border-top: 3px solid #003764;
+}
+
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer a { color: #666; text-decoration: none; margin: 0 8px; }
+.footer a:hover { color: #aaa; }
