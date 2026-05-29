@@ -1,0 +1,21 @@
+# 환경변수 (절대 커밋 금지 — OPENAI_API_KEY 포함)
+.env
+.env.local
+.env.*.local
+
+# chroma_db/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

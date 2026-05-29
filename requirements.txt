@@ -1,0 +1,8 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.6
+google-genai>=1.0.0
+chromadb>=0.5.20
+beautifulsoup4>=4.12.3
+python-dotenv>=1.0.1
+pypdf>=4.3.1
+pydantic>=2.9.2
