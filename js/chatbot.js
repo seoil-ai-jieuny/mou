@@ -9,7 +9,7 @@
   // ─── 설정 ───────────────────────────────────────
   const API_URL = window.CHATBOT_API_URL || "http://localhost:8000/api/chat";
   const SUGGESTIONS = [
-    "기업이 학교와 산학협력 협약을 맺으려면 어떻게 해야 하나요?",
+    "학교와 산학협력 협약을 어떻게 맺나요?",
     "산학협력 협약 체결 절차를 알려주세요",
     "공동연구 계약은 어떻게 진행되나요?",
     "협약 내용을 변경하려면 어떻게 하나요?",
@@ -137,11 +137,36 @@
   const addBotMsg = (text, sources) => {
     const node = el("div", { class: "chatbot-msg bot", html: renderBotText(text) });
     if (sources && sources.length) {
-      const srcLine = sources.map((s) => s.title || s.source || "문서").join(" · ");
-      node.appendChild(el("div", {
-        class: "chatbot-sources",
-        html: `<b>// 참고:</b> ${escapeHtml(srcLine)}`,
-      }));
+      const labels = sources.map((s) => s.title || s.source || "문서");
+      const first = labels[0];
+      const rest = labels.length - 1;
+      const summary = rest > 0 ? `${first} 외 ${rest}건` : first;
+
+      const wrap = el("div", { class: "chatbot-sources collapsed" });
+      const summaryEl = el("div", {
+        class: "chatbot-sources-summary",
+        html: `<b>// 참고:</b> ${escapeHtml(summary)}` +
+              (rest > 0 ? ` <span class="chatbot-sources-toggle">▾ 전체 보기</span>` : ""),
+      });
+      wrap.appendChild(summaryEl);
+
+      if (rest > 0) {
+        const detailEl = el("div", { class: "chatbot-sources-detail" });
+        labels.forEach((label) => {
+          detailEl.appendChild(el("div", { class: "chatbot-sources-item" }, "· " + label));
+        });
+        wrap.appendChild(detailEl);
+
+        summaryEl.addEventListener("click", () => {
+          wrap.classList.toggle("collapsed");
+          const toggle = summaryEl.querySelector(".chatbot-sources-toggle");
+          if (toggle) {
+            toggle.textContent = wrap.classList.contains("collapsed") ? "▾ 전체 보기" : "▴ 접기";
+          }
+        });
+      }
+
+      node.appendChild(wrap);
     }
     messages.appendChild(node);
     scrollBottom();

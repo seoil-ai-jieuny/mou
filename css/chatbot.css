@@ -203,6 +203,40 @@
   color: #00F0FF;
   font-weight: 500;
 }
+.chatbot-sources-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.5;
+}
+.chatbot-sources-toggle {
+  cursor: pointer;
+  color: #00F0FF;
+  margin-left: auto;
+  padding: 0 4px;
+  font-size: 10px;
+  user-select: none;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+.chatbot-sources-toggle:hover { opacity: 0.7; }
+.chatbot-sources-detail {
+  margin-top: 6px;
+  padding: 6px 0 2px 0;
+  border-top: 1px dashed rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.chatbot-sources-item {
+  color: #8B8BA8;
+  line-height: 1.45;
+  padding-left: 4px;
+}
+.chatbot-sources.collapsed .chatbot-sources-detail {
+  display: none;
+}
 
 /* 타이핑 인디케이터 */
 .chatbot-typing {
