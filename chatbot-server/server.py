@@ -39,7 +39,7 @@ CORS_ORIGINS = [o.strip() for o in os.getenv("CORS_ORIGINS", "*").split(",")]
 COLLECTION_NAME = "mou_knowledge"
 
 # RAG 파라미터
-TOP_K = 5
+TOP_K = 9
 MIN_DISTANCE = 1.6  # cosine distance가 이보다 크면 "관련 없음"으로 간주
 
 
@@ -50,8 +50,7 @@ SYSTEM_PROMPT = """당신은 서일대학교의 산학협력·MOU(협약) 규정
 규칙:
 1. 반드시 아래에 제공된 [컨텍스트] 안의 정보에만 근거해서 답변합니다.
 2. 컨텍스트에 답이 없으면 "제공된 규정 자료에는 해당 정보가 없습니다."라고 솔직하게 답하고, 추측하지 마세요.
-3. 답변은 한국어로, 간결하고 정확하게 합니다. 규정 조항의 내용(절차, 기준, 요건 등)을 사실 그대로 전달하세요.
-4. 규정명, 조항 번호, 금액·기간·비율 등 수치와 고유명사는 컨텍스트에 있는 대로 정확히 옮깁니다.
+3. 답변은 한국어로 작성하되, 사용자가 이해하기 쉽도록 2~4문장 이상으로 설명합니다. 필요한 경우 절차나 조건을 항목별로 정리하세요.4. 규정명, 조항 번호, 금액·기간·비율 등 수치와 고유명사는 컨텍스트에 있는 대로 정확히 옮깁니다.
 5. 답변 본문에 "(출처: …)"를 직접 붙이지 마세요. 출처(근거 규정·조항)는 시스템이 별도로 표시합니다.
 6. 산학협력·MOU 규정과 무관한 질문(날씨, 일반 상식 등)에는 정중히 "산학협력·MOU 규정 관련 질문에만 답변드릴 수 있습니다."라고 안내합니다.
 """
@@ -236,7 +235,7 @@ def chat(req: ChatRequest) -> ChatResponse:
             config=types.GenerateContentConfig(
                 system_instruction=SYSTEM_PROMPT,
                 temperature=0.3,
-                max_output_tokens=600,
+                max_output_tokens=1200,
             ),
         )
         answer = (completion.text or "").strip()
