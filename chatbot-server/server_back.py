@@ -121,18 +121,6 @@ class ChatResponse(BaseModel):
     sources: list[Source]
 
 
-
-# ─── 루트 페이지 ──────────────────────────────────
-@app.get("/")
-def root():
-    return {
-        "status": "ok",
-        "service": "MOU RAG Chatbot",
-        "health": "/api/health",
-        "chat": "/api/chat"
-    }
-
-
 # ─── 헬스 체크 ────────────────────────────────────
 @app.get("/api/health")
 def health() -> dict:
