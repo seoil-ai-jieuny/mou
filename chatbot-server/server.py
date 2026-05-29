@@ -14,6 +14,7 @@ MOU RAG 챗봇 백엔드 (FastAPI + Gemini API + Chroma).
 from __future__ import annotations
 
 import os
+import traceback
 from typing import Literal
 
 from dotenv import load_dotenv, find_dotenv
@@ -121,9 +122,9 @@ class ChatResponse(BaseModel):
     sources: list[Source]
 
 
-
 # ─── 루트 페이지 ──────────────────────────────────
 @app.get("/")
+@app.head("/")
 def root():
     return {
         "status": "ok",
@@ -198,7 +199,9 @@ def chat(req: ChatRequest) -> ChatResponse:
     try:
         docs, metas, dists = retrieve(question)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"검색 실패: {e}")
+        print("❌ 검색 실패:", repr(e))
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"검색 실패: {type(e).__name__}: {e}")
 
     # 거리가 너무 멀면 컨텍스트 비우기 (LLM이 모른다고 답하도록)
     relevant_pairs = [(d, m, dist) for d, m, dist in zip(docs, metas, dists) if dist <= MIN_DISTANCE]
@@ -238,7 +241,9 @@ def chat(req: ChatRequest) -> ChatResponse:
         )
         answer = (completion.text or "").strip()
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Gemini 호출 실패: {e}")
+        print("❌ Gemini 호출 실패:", repr(e))
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Gemini 호출 실패: {type(e).__name__}: {e}")
 
     if not answer:
         answer = "응답을 생성하지 못했습니다. 잠시 후 다시 시도해주세요."
