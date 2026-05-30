@@ -50,17 +50,50 @@
   // 패널
   const messages = el("div", { class: "chatbot-messages", id: "chatbot-messages" });
 
-  const suggestions = el(
+  // 추천 질문: 접기/펼치기 가능한 컨테이너
+  const suggestionsHeader = el("button", {
+    class: "chatbot-suggestions-header",
+    type: "button",
+    "aria-expanded": "false",
+  }, [
+    el("span", { class: "chatbot-suggestions-label" }, "💡 추천 질문"),
+    el("span", { class: "chatbot-suggestions-caret" }, "▾"),
+  ]);
+
+  const suggestionsList = el(
     "div",
-    { class: "chatbot-suggestions" },
+    { class: "chatbot-suggestions-list" },
     SUGGESTIONS.map((q) =>
       el("button", {
         class: "chatbot-chip",
         type: "button",
-        onclick: () => askQuestion(q),
+        onclick: () => {
+          askQuestion(q);
+          collapseSuggestions();
+        },
       }, q)
     )
   );
+
+  const suggestions = el("div", { class: "chatbot-suggestions collapsed" }, [
+    suggestionsHeader,
+    suggestionsList,
+  ]);
+
+  const collapseSuggestions = () => {
+    suggestions.classList.add("collapsed");
+    suggestionsHeader.setAttribute("aria-expanded", "false");
+    suggestionsHeader.querySelector(".chatbot-suggestions-caret").textContent = "▾";
+  };
+  const expandSuggestions = () => {
+    suggestions.classList.remove("collapsed");
+    suggestionsHeader.setAttribute("aria-expanded", "true");
+    suggestionsHeader.querySelector(".chatbot-suggestions-caret").textContent = "▴";
+  };
+  suggestionsHeader.addEventListener("click", () => {
+    if (suggestions.classList.contains("collapsed")) expandSuggestions();
+    else collapseSuggestions();
+  });
 
   const input = el("input", {
     class: "chatbot-input",
